@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Floods - Rising Waters</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Floods Prediction</div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('predict_ui') }}" class="active">Predict Floods</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="glass-panel">
+            <h1>Flood Prediction System</h1>
+            <p>Enter the weather details below to predict flood risk.</p>
+
+            <form action="{{ url_for('predict')}}" method="post">
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Temp">Temperature (°C)</label>
+                        <input type="number" step="any" name="Temp" id="Temp" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Humidity">Humidity (%)</label>
+                        <input type="number" step="any" name="Humidity" id="Humidity" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Cloud_Cover">Cloud Cover (%)</label>
+                        <input type="number" step="any" name="Cloud_Cover" id="Cloud_Cover" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="ANNUAL">Annual Rainfall (mm)</label>
+                        <input type="number" step="any" name="ANNUAL" id="ANNUAL" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Jan_Feb">Jan-Feb Rainfall (mm)</label>
+                        <input type="number" step="any" name="Jan_Feb" id="Jan_Feb" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Mar_May">Mar-May Rainfall (mm)</label>
+                        <input type="number" step="any" name="Mar_May" id="Mar_May" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Jun_Sep">Jun-Sep Rainfall (mm)</label>
+                        <input type="number" step="any" name="Jun_Sep" id="Jun_Sep" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="Oct_Dec">Oct-Dec Rainfall (mm)</label>
+                        <input type="number" step="any" name="Oct_Dec" id="Oct_Dec" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="avgjune">Average June Rainfall (mm)</label>
+                        <input type="number" step="any" name="avgjune" id="avgjune" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="sub">Subdivision Rainfall (mm)</label>
+                        <input type="number" step="any" name="sub" id="sub" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-predict">Predict Flood Risk</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
