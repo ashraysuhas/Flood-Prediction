@@ -7,7 +7,7 @@ A machine learning–powered web application that predicts **flood risk** based 
 ---
 ## Demo
 
-**Project Link:** https://drive.google.com/drive/folders/1eTfhTiNZIb38w0vuU7yzkfRbQ2Lvt1nH?usp=sharing
+**Project Explanation:** https://drive.google.com/drive/folders/1eTfhTiNZIb38w0vuU7yzkfRbQ2Lvt1nH?usp=sharing
 
 ## 📌 Table of Contents
 
